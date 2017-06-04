@@ -29,6 +29,13 @@ ALLOWED_HOSTS = [
     'ge-clicker-backend.herokuapp.com',
 ]
 
+CORS_ORIGIN_WHITELIST = (
+    'ge-clicker.github.io/frontend',
+    'ge-clicker-backend.herokuapp.com',
+    'dev.ge-clicker-backend.herokuapp.com',
+    'dev.ge-clicker-backend.herokuapp.com:8000',
+)
+
 
 # Application definition
 
@@ -39,9 +46,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders.middleware.CorsMiddleware',
     'rest_framework',
     'colorfield',
     'clicks',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
