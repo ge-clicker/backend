@@ -4,3 +4,4 @@ psycopg2==2.7.1
 whitenoise==3.3.0
 djangorestframework==3.6.3
 django-colorfield==0.1.14
+gunicorn==19.7.1
