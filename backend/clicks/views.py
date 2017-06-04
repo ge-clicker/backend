@@ -29,16 +29,19 @@ class ClicksList(views.APIView):
         return response.Response(serializer.data, status=status)
 
     def post(self, request, format=None):
-        serializer = serializers.ClickRecordSerializer(data=request.data)
+        serializer = serializers.ClickRecordSerializer(data=request.data, many=True)
         serializer.is_valid(raise_exception=True)
 
         ip_address = _get_client_ip(request)
 
-        clicks_service.add_click_record(
-            party_id=serializer.validated_data.get('id'),
-            clicks=serializer.validated_data.get('clicks'),
-            ip_address=ip_address,
-        )
+        click_records = serializer.validated_data
+
+        for click_record in click_records:
+            clicks_service.add_click_record(
+                party_id=click_record['id'],
+                clicks=click_record['clicks'],
+                ip_address=ip_address,
+            )
 
         return self.get(request, status=status.HTTP_201_CREATED)
 

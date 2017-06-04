@@ -26,6 +26,7 @@ SECRET_KEY = '$=vd2g-*av4kac&0nbjlwxitn4x7robl7g!3)f!#a#&^n))=$o'
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    'localhost',
     'ge-clicker-backend.herokuapp.com',
 ]
 
