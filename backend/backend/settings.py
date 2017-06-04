@@ -25,7 +25,9 @@ SECRET_KEY = '$=vd2g-*av4kac&0nbjlwxitn4x7robl7g!3)f!#a#&^n))=$o'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'ge-clicker-backend.herokuapp.com',
+]
 
 
 # Application definition
