@@ -31,7 +31,7 @@ ALLOWED_HOSTS = [
 ]
 
 CORS_ORIGIN_WHITELIST = (
-    'ge-clicker.github.io/frontend',
+    'ge-clicker.github.io',
     'ge-clicker-backend.herokuapp.com',
     'dev.ge-clicker-backend.herokuapp.com',
     'dev.ge-clicker-backend.herokuapp.com:8000',
