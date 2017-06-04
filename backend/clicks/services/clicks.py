@@ -29,7 +29,7 @@ def get_click_data():
     time_periods = {
         # Hack, I know
         'all_time': timezone.now() - timedelta(days=10000),
-        'ten_minutes': timezone.now() - timedelta(minutes=10),
+        'ten_minutes': timezone.now() - timedelta(seconds=30),
         'one_hour': timezone.now() - timedelta(hours=1),
         'one_day': timezone.now() - timedelta(days=1),
     }
