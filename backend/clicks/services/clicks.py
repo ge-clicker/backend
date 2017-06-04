@@ -29,9 +29,9 @@ def get_click_data():
     time_periods = {
         # Hack, I know
         'all_time': timezone.now() - timedelta(days=10000),
-        'ten_minutes': timezone.now() - timedelta(seconds=10),
-        'one_hour': timezone.now() - timedelta(hours=1),
-        'one_day': timezone.now() - timedelta(days=1),
+        'ten_minutes': timezone.now() - timedelta(seconds=5),
+        'one_hour': timezone.now() - timedelta(seconds=10),
+        'one_day': timezone.now() - timedelta(minutes=1),
     }
 
     click_data_for_party = {party.id: {
